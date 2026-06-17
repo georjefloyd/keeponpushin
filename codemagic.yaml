@@ -1,0 +1,20 @@
+workflows:
+  ios-build:
+    name: iOS Build
+    environment:
+      flutter: stable
+      xcode: 15.4
+      cocoapods: default
+    scripts:
+      - flutter pub get
+      - flutter build ios --release --no-codesign
+    artifacts:
+      - build/ios/iphoneos/Runner.app
+      - /tmp/xcodebuild_logs/*.log
+    publishing:
+      email:
+        recipients:
+          - you@example.com
+        notify:
+          success: true
+          failure: true

@@ -1,0 +1,26 @@
+name: ios_placeholder_app
+description: A Flutter placeholder app with iOS Cupertino system components for Codemagic + AltStore distribution.
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.2.0 <4.0.0'
+
+flutter:
+  uses-material-design: false
+
+  assets:
+    - assets/
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+
+flutter_gen:
+  assets:
+    enabled: false
