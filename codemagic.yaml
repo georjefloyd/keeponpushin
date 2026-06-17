@@ -6,6 +6,7 @@ workflows:
       xcode: 15.4
       cocoapods: default
     scripts:
+      - flutter create . --platforms=ios
       - flutter pub get
       - flutter build ios --release --no-codesign
     artifacts:
